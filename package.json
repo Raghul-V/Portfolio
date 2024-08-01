@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "scss-watch": "sass --watch style.scss style.css",
+    "scss-build": "sass style.scss style.css",
+    "tailwind-watch": "npx postcss style.css -o output.css --watch --minify",
+    "tailwind-build": "npx postcss style.css -o output.css --minify"
+  },
+  "dependencies": {
+    "cssnano": "^7.0.4",
+    "gsap": "^3.12.5",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.77.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6"
+  }
+}
