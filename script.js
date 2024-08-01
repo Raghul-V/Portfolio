@@ -60,25 +60,25 @@ const contactForm = document.querySelector('form#contact')
 contactForm.addEventListener('submit', e => {
     e.preventDefault()
 
-    let subject = ""
-    let content = ""
-
     let fullName = contactForm.querySelector('input[name="fullName"]').value.trim()
     let company = contactForm.querySelector('input[name="company"]').value.trim()
     let phoneNo = contactForm.querySelector('input[name="phoneNo"]').value.trim()
     let body = contactForm.querySelector('textarea[name="body"]').value.trim()
 
+    let subject = `From Raghul's Portfolio Contact Form: ${fullName} from ${company}`
+    let content = ""
+
     if (fullName) {
-        content += `FullName: ${fullName}\n`
+        content += `Full Name: ${fullName}\n`
     }
     if (company) {
-        content += `Company: ${company}\n`
+        content += `Company Name: ${company}\n`
     }
     if (phoneNo) {
-        content += `ContactNo: ${phoneNo}\n`
+        content += `Phone Number: ${phoneNo}\n`
     }
     if (body) {
-        content += `\n${body}\n\n`
+        content += `\nMessage:\n${body}\n\n`
     }
 
     window.open(`mailto:raghul11072004@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`)
